@@ -10,18 +10,22 @@
     </style>
 </head>
 <body>
-<h2 id="text">ON</h2>
-<button id="on">turn on</button>
-<button id="off">turn off</button>
+<h2 id="text">OFF</h2>
+<button id="switch">turn on</button>
 
 <script>
-  document.getElementById('on').onclick = () => {
-    document.getElementById('text').innerText = 'ON';
+  let state = false;
+
+  function update() {
+    document.getElementById('text').innerText = state ? 'ON': 'OFF';
+    document.getElementById('switch').innerText = state ? 'turn off' : 'turn on';
+  }
+
+  document.getElementById('switch').onclick = () => {
+    state = !state;
+    update();
   };
 
-  document.getElementById('off').onclick = () => {
-    document.getElementById('text').innerText = 'OFF';
-  };
 </script>
 </body>
 </html>
