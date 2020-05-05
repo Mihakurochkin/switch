@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>switch</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 <h2 id="text">ON</h2>
 <button id="on">turn on</button>
 <button id="off">turn off</button>
+
 <script>
   document.getElementById('on').onclick = () => {
     document.getElementById('text').innerText = 'ON';
