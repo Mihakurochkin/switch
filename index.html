@@ -7,11 +7,17 @@
         body {
             background-color: #95ff7d;
         }
+
+        #switch {
+            border: 0;
+            padding: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-<h2 id="text">OFF</h2>
-<button id="switch">turn on</button>
+<h2 id="text"></h2>
+<button id="switch"></button>
 
 <script>
   let state = false;
@@ -19,7 +25,10 @@
   function update() {
     document.getElementById('text').innerText = state ? 'ON': 'OFF';
     document.getElementById('switch').innerText = state ? 'turn off' : 'turn on';
+    document.getElementById('switch').style.backgroundColor = state ? 'green' : 'red';
   }
+
+  update();
 
   document.getElementById('switch').onclick = () => {
     state = !state;
