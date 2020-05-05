@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>switch</title>
     <style>
-        body {
-            background-color: #95ff7d;
-        }
-
         #switch {
             border: 0;
             padding: 10px;
@@ -15,7 +11,7 @@
         }
     </style>
 </head>
-<body>
+<body id="page">
 <h2 id="text"></h2>
 <button id="switch"></button>
 
@@ -26,6 +22,7 @@
     document.getElementById('text').innerText = state ? 'ON': 'OFF';
     document.getElementById('switch').innerText = state ? 'turn off' : 'turn on';
     document.getElementById('switch').style.backgroundColor = state ? 'green' : 'red';
+    document.getElementById('page').style.backgroundColor = state ? '#95ff7d' : '#FF5D7F'
   }
 
   update();
